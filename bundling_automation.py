@@ -213,7 +213,7 @@ def all_admin_orders_accounting_page(order_number,headers):
 def process_fee_amt_change(data,headers):
     
     fee_dict = dict(zip(data['Order'],data['Final Amt Fee']))
-
+    fee_dict
     for order in data['Order']:
 
         order_number = order
