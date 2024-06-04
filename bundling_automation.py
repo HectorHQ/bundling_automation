@@ -213,7 +213,7 @@ def all_admin_orders_accounting_page(order_number,headers):
 def process_fee_amt_change(data,headers):
     
     fee_dict = dict(zip(data['Order'],data['Final Amt Fee']))
-    fee_dict
+    
     for order in data['Order']:
 
         order_number = order
@@ -243,7 +243,9 @@ def regenerate(data,headers):
     for order in list_orders:
         order_number = order
         order_data = all_admin_orders_accounting_page(order_number,headers)
-    
+        order_data = order_data.json()
+        
+         
         qb_invoice_data = {
             "orderId": order_data['data']['viewer']['allAdminAccountingOrders']['results'][0]['id'],
             "pricingPercentage": order_data['data']['viewer']['allAdminAccountingOrders']['results'][0]['pricingPercentage'],
