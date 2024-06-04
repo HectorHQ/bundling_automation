@@ -313,6 +313,7 @@ else:
                 df_Brand.rename(columns={'Final Fee (Adjusted for Any Proration & Excluding Flat Order Fee)':'Final Amt Fee'}, inplace=True)
                 df_Brand['Final Amt Fee'] = np.where(df_Brand['Script Trigger']== True, 0 ,df_Brand['Final Amt Fee'].round(2))
                 df_Brand['Brand or Sales'] = 'Brand'
+                df_Brand['Order'] = df_Brand['Order'].astype('str')
                 st.dataframe(df_Brand)
                 pricing_change_button = st.button('Pricing Change brand',key='pricing_change_brand')
                 if pricing_change_button:
@@ -325,6 +326,7 @@ else:
                 df_Sales['Script Trigger'] = True
                 df_Sales['Final Amt Fee'] = 0
                 df_Sales['Brand or Sales'] = 'Sales'
+                df_Sales['Order'] = df_Sales['Order'].astype('str')
                 st.dataframe(df_Sales)
                 pricing_change_button = st.button('Pricing Change Sales',key='pricing_change_sales')
                 
