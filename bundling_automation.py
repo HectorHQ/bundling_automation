@@ -220,7 +220,7 @@ def process_fee_amt_change(data,headers):
         order_data = all_admin_orders_accounting_page(order_number,headers)
         order_data = order_data.json()
 
-        flat_fee_amt = fee_dict['order']
+        flat_fee_amt = fee_dict['Order']
         
 
         qb_invoice_data = {
