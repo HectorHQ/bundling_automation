@@ -307,6 +307,8 @@ else:
         col_names_sales = ['Order', 'Brand', 'Retailer', 'Delivery Date', 'Stop ID', 'Created At', 'Min Fee', 'Stop Subtotal Threshold Met?']
         col_names_brand = ['Order', 'Brand', 'Retailer', 'Delivery Date', 'Stop ID', 'Created At', 'Order Min Fee', 'Final Fee (Adjusted for Any Proration & Excluding Flat Order Fee)','Script Trigger']
 
+        dataframes
+      
         if len(dataframes) > 0:
 
             if 'table-data_Brand' in dataframes:
