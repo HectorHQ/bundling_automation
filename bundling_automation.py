@@ -219,7 +219,7 @@ def process_fee_amt_change(data,headers):
         order_number = order
         order_data = all_admin_orders_accounting_page(order_number,headers)
         order_data = order_data.json()
-        order_data
+        
       
         flat_fee_amt = fee_dict[order]
         
